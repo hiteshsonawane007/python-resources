@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-api-demo
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: flask-api-back-end
+          image: 136262601201.dkr.ecr.us-east-1.amazonaws.com/flask-app-eks-ecr-demo:v0.0.1
+          ports:
+            - containerPort: 5001
