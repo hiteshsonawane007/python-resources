@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aegon MFT Request Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        form {
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/process">
+        <h2>Enter Details for MF Server Setup Request</h2>
+
+        <label for="user">User:</label>
+        <input type="text" id="user" name="user" required>
+
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region" required>
+
+        <label for="endpoint_type">Endpoint Type:</label>
+        <input type="text" id="endpoint_type" name="endpoint_type" required>
+
+        <label for="identity_provider">Identity Provider:</label>
+        <input type="text" id="identity_provider" name="identity_provider" required>
+
+        <label for="tags">Tag:</label>
+        <input type="text" id="tags" name="tags" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
